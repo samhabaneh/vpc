@@ -10,3 +10,8 @@ resource "aws_subnet" "main" {
   cidr_block        = each.value
 }
 
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
+
+}
+
